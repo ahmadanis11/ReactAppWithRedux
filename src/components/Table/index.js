@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Table, Input } from "antd";
+import {Table, Input, Spin} from "antd";
 import { Loader} from "../Loader";
 
 export const DataTable = ({
@@ -27,7 +27,7 @@ export const DataTable = ({
             />
           </div>
         </div>
-        {isLoading ? <Loader /> :
+        {isLoading ? <Spin /> :
           <Table
             id={'table-ant'}
             dataSource={data}

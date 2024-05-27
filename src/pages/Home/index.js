@@ -74,8 +74,7 @@ const Homepage = () => {
         isLoading={isLoading}
         apiCallFor={apiCallFor}
       />
-      {isLoading && apiCallFor ==='people' ? <Spin/> :
-        (<>
+        <>
           <DataTable
             data={enhancedData || []}
             columns={Columns}
@@ -84,10 +83,9 @@ const Homepage = () => {
             pageSize={pageSize}
             handlePageChange={handlePageChange}
             handleSearch={handleSearch}
-            isLoading={false}
+            isLoading={isLoading}
           />
-        </>)
-      }
+        </>
     </div>
   );
 };
