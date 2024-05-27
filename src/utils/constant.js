@@ -42,13 +42,6 @@ export const Columns = [
       ),
     key: "edited",
   },
-  {
-    title: "Action",
-    key: "action",
-    render: (text, record) => (
-      <Button onClick={() => record.showVehicles(record)}>Show vehicles</Button>
-    ),
-  },
 ];
 
 export const vehicleColumns= [

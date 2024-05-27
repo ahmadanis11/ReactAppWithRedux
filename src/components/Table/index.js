@@ -12,7 +12,8 @@ export const DataTable = ({
   currentPage,
   handlePageChange,
   pageSize,
-  handleSearch
+  handleSearch,
+  apiCallFor
 }) => {
 
 
@@ -27,7 +28,7 @@ export const DataTable = ({
             />
           </div>
         </div>
-        {isLoading ? <Spin /> :
+        {isLoading && apiCallFor==='people' ? <Spin /> :
           <Table
             id={'table-ant'}
             dataSource={data}
